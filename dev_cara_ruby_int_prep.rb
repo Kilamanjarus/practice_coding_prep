@@ -1,8 +1,58 @@
 # Write a function that takes an array of integers and returns the sum of the even numbers in the array.
 
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+sum = 0
+array.each do |num|
+  sum = sum + num
+end
+p sum
+
 # Write a function that takes a string as input and returns the same string with the words in reverse order.
 
+def reverse(string)
+  string = string.split(//)
+  p string
+  new_string = []
+  ind_new = 0
+  ind_old = string.length - 1
+  while ind_new <= string.length - 1
+    new_string[ind_new] = string[ind_old]
+    ind_new += 1
+    ind_old -= 1
+  end
+  p new_string.join
+end
+
+reverse("tea")
+
 # Write a function that takes a string and returns true if the string is a palindrome, and false otherwise.
+
+def palindrome(string)
+  array = string.split(//)
+  pali = false
+  if string.length.even?
+    length = string.length / 2
+  else
+    length = string.length / 2 + 1
+  end
+  p length
+  i = 0
+  while i < length
+    if array[i] != array[array.length - i - 1]
+      return false
+    else
+      i += 1
+    end
+    if array[i] == array[array.length - i - 1] && i == length - 1
+      pali = true
+    elsif array[i] == array[array.length - i - 1] && i == array.length - i - 1
+      pali = true
+    end
+  end
+  return pali
+end
+
+p palindrome("kayak")
 
 # Write a function that takes a string and returns the number of vowels in the string.
 
