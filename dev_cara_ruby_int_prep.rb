@@ -56,7 +56,29 @@ p palindrome("kayak")
 
 # Write a function that takes a string and returns the number of vowels in the string.
 
+def count_vowels(string)
+  vowels = "aeiouAEIOU"
+  string = string.chars.select { |char| vowels.include?(char) }.join("")
+  return string.length
+end
+
 # Write a function that takes an array of integers and returns the second largest number in the array.
+
+def second_largest(array)
+  if array[0] > array [1]
+    largest = array[0]
+    second = array[1]
+  else
+    second = array[0]
+    largest = array[1]
+  end
+  array.each do |num|
+    if num == largest
+      skip
+       
+end
+p second_largest([1, 23, 44, 3, 202, 11, 99, 45, 21])
+
 
 # Write a function that takes two arrays and returns a new array that contains the intersection of the two arrays (i.e., the elements that are common to both arrays).
 
