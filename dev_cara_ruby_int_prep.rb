@@ -75,12 +75,24 @@ def second_largest(array)
   array.each do |num|
     if num == largest
       skip
-       
+
 end
 p second_largest([1, 23, 44, 3, 202, 11, 99, 45, 21])
 
 
 # Write a function that takes two arrays and returns a new array that contains the intersection of the two arrays (i.e., the elements that are common to both arrays).
+
+def array_intersection(arr1, arr2)
+  intersection = []
+  arr1.each do |element|
+    if arr2.include?(element)
+      intersection << element
+    end
+  end
+  return intersection
+end
+
+p intersection([1,2,3,4,5,6,7,8,9],[1, 13, 3, 43, 6, 9])
 
 # Write a function that takes a string as input and returns a new string where each word is capitalized.
 
