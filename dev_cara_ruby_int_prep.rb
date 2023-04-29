@@ -96,7 +96,16 @@ p intersection([1,2,3,4,5,6,7,8,9],[1, 13, 3, 43, 6, 9])
 
 # Write a function that takes a string as input and returns a new string where each word is capitalized.
 
+def capitalize_words(str)
+  return str.split.map(&:capitalize).join(' ')
+end
+
+
 # Write a function that takes a string as input and returns a new string where the first letter of each word is capitalized.
+
+def capitalize_first_letter(str)
+  return str.split.map(&:capitalize_first).join(' ')
+end
 
 # Write a function that takes an array of integers and returns a new array where each element is multiplied by 2.
 
