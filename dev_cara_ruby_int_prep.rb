@@ -100,4 +100,32 @@ p intersection([1,2,3,4,5,6,7,8,9],[1, 13, 3, 43, 6, 9])
 
 # Write a function that takes an array of integers and returns a new array where each element is multiplied by 2.
 
+def multiply_by_two(arr)
+  return arr.map { |num| num * 2 }
+end
+
+
 # Write a function that takes a string as input and returns the most common letter in the string.
+
+def most_common_letter(str)
+  str.downcase!
+  frequencies = {}
+  str.each_char do |char|
+    if char =~ /[a-z]/
+      if frequencies.has_key?(char)
+        frequencies[char] += 1
+      else
+        frequencies[char] = 1
+      end
+    end
+  end
+  most_common_char = nil
+  highest_frequency = 0
+  frequencies.each do |char, frequency|
+    if frequency > highest_frequency
+      most_common_char = char
+      highest_frequency = frequency
+    end
+  end
+  return most_common_char
+end
